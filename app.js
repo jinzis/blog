@@ -32,7 +32,7 @@ app.use(session({
   resave:true,
   saveUninitialized:true,
   store:new MongoStore({// 指定会话的数据库存储位置
-          url:'mongodb://123.57.143.189:27017/jinxinblog'
+          url:'mongodb://123.57.143.189:27017/jinziblog'
  })
 }));
 

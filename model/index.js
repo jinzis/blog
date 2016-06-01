@@ -2,7 +2,7 @@
  * Created by jinxin on 2016-06-01.
  */
 var mongoose=require('mongoose');
-mongoose.connect('mongodb://https://123.57.143.189:27017/jinxinblog');
+mongoose.connect('mongodb:123.57.143.189:27017/jinziblog');
 var userSchema=new mongoose.Schema({
     username:{type:String},
     password:{type:String},
