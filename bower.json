@@ -1,0 +1,18 @@
+{
+  "name": "jinziblog",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/jinzis/blog",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
