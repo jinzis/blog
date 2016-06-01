@@ -10,7 +10,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var article = require('./routes/article');
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+var MongoStore = require('connect-mongo/es5')(session);
 var flash = require('connect-flash');
 
 var app = express();
@@ -32,7 +32,7 @@ app.use(session({
   resave:true,
   saveUninitialized:true,
   store:new MongoStore({// 指定会话的数据库存储位置
-          url:'mongodb://123.57.143.189:27017/jinziblog'
+          url:'mongodb://123.57.143.189:27017/jinxinblog'
  })
 }));
 
