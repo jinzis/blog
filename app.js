@@ -10,7 +10,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var article = require('./routes/article');
 var session = require('express-session');
-var MongoStore = require('connect-mongo/es5')(session);
+var MongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash');
 
 var app = express();

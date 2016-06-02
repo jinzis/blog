@@ -37,7 +37,16 @@ router.get('/login',ware.checkNoLogin, function(req, res, next) {
 });
 /*提交登录信息*/
 router.post('/login',ware.checkNoLogin, function(req, res, next) {
-  res.send('post login');
+  var user=req.body;
+  model.user.findOne(user,function (err,doc) {
+    if(err){
+      req.flash('error',"登录失败，用户名和密码不符");
+      res.redirect('back');
+    }else{
+      req.session.user=doc;
+      res.redirect('/');
+    }
+  })
 });
 /*退出*/
 router.get('/logout',ware.checkLogin, function(req, res, next) {
